@@ -18,11 +18,13 @@ public static class Actor {
 		return collisions.ToArray();
 	}
 
+	//añadir colision
 	public static void RegisterCollider(RectCollider collider) {
 		if (colliders == null) colliders = new List<RectCollider>();
 		colliders.Add(collider);
 	}
 	
+	//eliminar colision
 	public static void DeleteCollider(RectCollider collider) {
 		colliders.Remove(collider);
 	}
