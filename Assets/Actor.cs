@@ -7,11 +7,9 @@ public static class Actor {
 
 	public static CollisionInfo[] Collide(Vector2 curPos, Vector2 attemptPos, Vector2 dimensions, float shorten) {
 		List<CollisionInfo> collisions = new List<CollisionInfo>();
-		foreach (RectCollider collider in colliders)
-		{ 
+		foreach (RectCollider collider in colliders) {
 			CollisionInfo collision = collider.Collide(dimensions, curPos, attemptPos, shorten);
-			if (collision.hitBottom || collision.hitTop || collision.hitRight || collision.hitLeft) 
-			{
+			if (collision.hitBottom || collision.hitTop || collision.hitRight || collision.hitLeft) {
 				collisions.Add(collision);
 			}
 		}
